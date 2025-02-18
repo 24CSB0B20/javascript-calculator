@@ -1,0 +1,175 @@
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Liter&display=swap"
+        rel="stylesheet">
+    <title>Apple Calculator</title>
+    <style>
+        @font-face {
+            font-family: "SF";
+            src: url("./sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+        }
+
+        @font-face {
+            font-family: "SFthin";
+            src: url("./sf-pro-display/SF-Pro-Display-Thin.otf");
+        }
+
+        body {
+            font-family: "SF", serif;
+            font-weight: 300;
+            font-size: 2.25rem;
+            background-color: #333333;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom right, #1f1d1d, rgba(194, 164, 120, 0.699));
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+        }
+
+        .calc {
+            min-width: 24.5rem;
+            height: max-content;
+            background-color: black;
+            padding: 2rem 1.5rem;
+            padding-bottom: 3rem;
+            border-radius: 2rem;
+            box-shadow: 4Px 4px 4px 4px rgb(0 0 0 / 30%);
+        }
+
+        .answer {
+            position: relative;
+            height: 15rem;
+            overflow: hidden;
+        }
+
+
+        .num {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            font-size: 5rem;
+            font-weight:lighter;
+            font-family: "SFthin";
+        }
+
+        .buttons {
+            height: 25%;
+            font-weight: 400;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 80%;
+            aspect-ratio: 1 / 1;
+            margin: auto;
+        }
+
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+        }
+        .span-2 {
+            grid-column: 1 / span 2;
+            width: 90%;
+            height: 100%;
+            aspect-ratio: auto;
+            border-radius: 10rem;
+        }
+
+        .grey {
+            background-color: #A5A5A5;
+            transition: background-color 0.5s;
+            color: black;
+        }
+
+        .orange {
+            background-color: #FE9500;
+            transition: all 0.5s;
+        }
+
+        .dark {
+            background-color: #333333;
+            transition: background-color 0.25s;
+        }
+
+        .orange:hover {
+            background-color: #ffb54c;
+        }
+
+        .grey:hover {
+            background-color: #828282;
+        }
+
+        .dark:hover {
+            background-color: #4B4B4B;
+        }
+
+        .img{
+            width: 7.5rem;
+            filter: invert(1);
+        }
+
+        .logo-text{
+            display: flex;
+            align-items: center;
+            font-family: "SFthin";
+            padding-top: 1.75rem;
+            font-weight: 400;
+            margin-left: 2rem;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img class="img" src="Apple_logo_black.svg">
+        <div class="logo-text">Calculator</div>
+    </div>
+    <div class="calc">
+        <div class="answer">
+            <div class="num">0</div>
+        </div>
+        <div class="buttons">
+            <div class="button grey">AC</div>
+            <div class="button grey">+/-</div>
+            <div class="button grey">%</div>
+            <div class="button orange">÷</div>
+            <div class="button dark">7</div>
+            <div class="button dark">8</div>
+            <div class="button dark">9</div>
+            <div class="button orange">×</div>
+            <div class="button dark">4</div>
+            <div class="button dark">5</div>
+            <div class="button dark">6</div>
+            <div class="button orange">-</div>
+            <div class="button dark">1</div>
+            <div class="button dark">2</div>
+            <div class="button dark">3</div>
+            <div class="button orange">+</div>
+            <div class="button dark span-2">0</div>
+            <div class="button dark">.</div>
+            <div class="button orange">=</div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
